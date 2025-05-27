@@ -1,0 +1,624 @@
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>유가인 포트폴리오</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/gallery.css">
+		<link rel="stylesheet" href="video-scroll.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="assets/js/updated-custom-header.js"></script>
+	</head>
+		<!-- Header -->
+			<header id="header">
+				<h1>포트폴리오</h1>
+				<nav>
+					<ul>
+						<li><a href="#intro">개요</a></li>
+						<li><a href="#work">작업물</a></li>
+						<li><a href="#custom-header">성격의 장단점</a></li>
+						<li><a href="#contact">자격사항</a></li>
+						<li><a href="#custom-header3">성장배경,지원동기 및 포부</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Intro -->
+        <section id="intro" class="main style1 dark fullscreen">
+            <div class="content">
+                <header>
+                    <h2>PORTFOLIO</h2>
+                </header>
+                <H5 style="font-size:1.5em;">인적사항<br />
+학력 및 경력사항<br />
+작업물<br />
+성격의 장단점<br />
+자격사항<br />
+성장배경,지원동기 및 포부<br /></H5>
+            </div>
+        </section>
+
+		<!-- One -->
+			<section id="one" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>유가인<BR>96.04.04</h2>
+					</header>
+					<H5 style="font-size:1.5em;">서울특별시 관악구 신림동 1463-74 204호<br>010-9644-4854<br>gain2255@naver.com
+					</div></H5>
+			</section>
+		<!-- Two -->
+		<section id="two" class="main style2 left dark fullscreen">
+			<div class="content box style2">
+				<header>
+					<H2><ul style="list-style: none; padding: 0; margin: 0;">
+						<li style="text-align: left;">학력 및 경력사항</li>
+					</ul>
+					<div style="text-align: left;"></div></H2>
+                    <H5 style="text-align: left;font-size:1.5em;">학력 및 경력사항입니다.</H5>
+				</header>
+				</div>
+                
+				
+			</section>
+
+<body>
+    <header id="custom-header2">
+    <section id="work" class="main style3 primary">
+        <div class="content">
+            <header>
+                <h2>작업물</h2>
+                <h5>개인작업물을 소개합니다.</h5>
+            </header>
+    
+            <!-- Gallery -->
+            <div class="gallery">
+                <article class="from-left">
+                    <div class="image-wrapper">
+                        <img src="images/001.jpg" title="개인작업물 드로잉" alt="개인작업물 드로잉" />
+                            <div class="hover-text">개인작업물<br></div>
+                        </a>
+                    </div>
+                </article>
+                <article class="from-right">
+                    <div class="image-wrapper">
+                    <img src="images/002.jpg" title="개인작업물 비트메이킹" alt="" />
+                            <div class="hover-text">비트메이킹</div>
+                        </a>
+                    </div>
+                </article>
+                <article class="from-left">
+                    <div class="image-wrapper">
+                        <img src="images/003.jpg" title="홍보작업물 인쇄물" alt="" />
+                            <div class="hover-text">홍보작업물</div>
+                        </a>
+                    </div>
+                </article>
+                <article class="from-right">
+                    <div class="image-wrapper">
+                        <a href="images/fulls/004.jpg" class="image fit">
+                            <img src="images/004.jpg" title="홍보작업물 숏폼영상" alt="" />
+                            <div class="hover-text">영상작업물</div>
+                        </a>
+                    </div>
+                </article>
+            </div>
+    </section>
+<body>
+    <header id="custom-header">
+        <div class="header-content">
+            <h2>성격의 장단점</h2>
+            <h3>성격의 장단점입니다.</h3>
+            <nav>
+                <ul class="custom-icon-list">
+                    <li><a href="#" data-modal-src="images/010.jpg"><img src="images/005.jpg" alt="Twitter"></a></li>
+                    <li><a href="#" data-modal-src="images/009.jpg"><img src="images/006.jpg" alt="Facebook"></a></li>
+                    <li><a href="#" data-modal-src="images/011.jpg"><img src="images/007.jpg" alt="Dribbble"></a></li>
+                    <li><a href="#" data-modal-src="images/012.jpg"><img src="images/008.jpg" alt="Github"></a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+    
+    <!-- 모달 구조 -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Modal Image">
+    </div>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+    const $modal = $("#imageModal");
+    const $modalImage = $("#modalImage");
+    const $customIconLinks = $(".custom-icon-list a");
+    let scrollPosition = 0; // 현재 스크롤 위치를 저장할 변수
+
+    // 모달 열기 함수
+    function openModal(imageSrc) {
+        scrollPosition = $(window).scrollTop(); // 현재 스크롤 위치 저장
+        $modalImage.attr("src", imageSrc); // 이미지 경로 설정
+        $modal.show(); // 모달 표시
+        $("body").css({
+            position: "fixed",
+            top: `-${scrollPosition}px`,
+            width: "100%",
+            overflow: "hidden",
+        }); // 스크롤 고정
+    }
+
+    // 모달 닫기 함수
+    function closeModal() {
+        $modal.hide(); // 모달 숨기기
+        $("body").css({
+            position: "",
+            top: "",
+            overflow: "",
+        }); // 스크롤 복원
+        $(window).scrollTop(scrollPosition); // 저장된 스크롤 위치로 복원
+    }
+
+    // 각 링크 클릭 이벤트 추가
+    $customIconLinks.on("click", function (event) {
+        event.preventDefault(); // 링크 기본 동작 방지
+        const imageSrc = $(this).data("modal-src"); // data-modal-src에서 이미지 경로 가져오기
+        openModal(imageSrc); // 모달 열기
+    });
+
+    // 모달 닫기 이벤트 추가
+    $modal.on("click", closeModal); // 모달 클릭 시 닫기
+    $(".close").on("click", closeModal); // 닫기 버튼 클릭 시 닫기
+});
+
+</script>
+
+
+    <style>
+
+#imageModal {
+        display: none;
+        position: fixed;
+        z-index: 1000; /* 모달 창을 가장 앞으로 배치 */
+        left: 0;
+        top: 10%; /* 모달 위치를 약간 아래로 조정 */
+        width: 100%;
+        height: 80%; /* 화면의 80% 높이로 설정 */
+        overflow: auto; /* 콘텐츠가 넘칠 경우 스크롤 가능 */
+        background-color: rgba(0, 0, 0, 0.8); /* 어두운 배경 */
+    }
+
+    #imageModal .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 90%; /* 이미지를 화면에 맞게 조정 */
+        max-height: 90%;
+    }
+
+    #imageModal .close {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        color: #fff;
+        font-size: 35px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1001; /* 닫기 버튼을 모달 위로 */
+    }
+
+    #imageModal .close:hover,
+    #imageModal .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+        .image-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .image-wrapper img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+    
+        .image-wrapper .hover-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 2;
+        }
+    
+        .image-wrapper:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.7); /* 어두워지는 효과 */
+        }
+    
+        .image-wrapper:hover .hover-text {
+            opacity: 1;
+        }
+        
+        
+    </style>
+    
+    
+
+<!-- Contact -->
+<section id="contact" class="main style3 secondary">
+    <div class="content">
+        <header>
+            <h2 class="custom-font large">자격사항</h2>
+            <h5 class="custom-font small">취득 자격사항목록입니다.</h5>
+        </header>
+        <div class="box2">
+            <!-- 각 필드를 박스 형태로 구분 -->
+            <div class="field-box" style="background-image: url('images/page1_1.jpg');" onclick="openModal('images/page1_1.jpg')">
+                <div class="field-content custom-font">
+                    <h2 class="large">시각디자인 산업기사</h2>
+                    <h5 class="small">2024년 5월 29일 취득</h5>
+                </div>
+            </div>
+            <div class="field-box" style="background-image: url('images/산업안전.jpg');" onclick="openModal('images/산업안전.jpg')">
+                <div class="field-content custom-font">
+                    <h2 class="large">산업안전 산업기사</h2>
+                    <h5 class="small">2020년 9월 11일 취득</h5>
+                </div>
+            </div>
+            <div class="field-box" style="background-image: url('images/산업위생.jpg');" onclick="openModal('images/산업위생.jpg')">
+                <div class="field-content custom-font">
+                    <h2 class="large">산업위생관리 산업기사</h2>
+                    <h5 class="small">2023년 11월 15일 취득</h5>
+                </div>
+            </div>
+            <div class="field-box" style="background-image: url('images/위험물.jpg');" onclick="openModal('images/위험물.jpg')">
+                <div class="field-content custom-font">
+                    <h2 class="large">위험물 산업기사</h2>
+                    <h5 class="small">2023년 06월 09일 취득</h5>
+                </div>
+            </div>
+            <div class="field-box" style="background-image: url('images/에너지.jpg');" onclick="openModal('images/에너지.jpg')">
+                <div class="field-content custom-font">
+                    <h2 class="large">에너지관리 기능사</h2>
+                    <h5 class="small">2020년 12월 31일 취득</h5>
+                </div>
+            </div>
+                <div class="field-box" style="background-image: url('images/가스.jpg');" onclick="openModal('images/가스.jpg')">
+                    <div class="field-content custom-font">
+                        <h2 class="large">가스 기능사</h2>
+                        <h5 class="small">2019년 12월 27일 취득</h5>
+                        </div>
+                    </div>
+                        <div class="field-box" style="background-image: url('images/컴퓨터.jpg');" onclick="openModal('images/컴퓨터.jpg')">
+                            <div class="field-content custom-font">
+                                <h2 class="large">컴퓨터응용선반 기능사</h2>
+                                <h5 class="small">2014년 07월 18일 취득</h5>  
+                            </div>
+                        </div>
+                                <div class="field-box" style="background-image: url('images/포토.jpg');" onclick="openModal('images/포토.jpg','images/인디.jpg','images/일러.jpg')">
+                                    <div class="field-content custom-font">
+                                        <h2 class="large">GTQ포토샵 1급,인디자인 1급, 일러스트 2급</h2>
+                                        <h5 class="small">2023년 11월 17일,2024년 02월 16일,2023년 12월 15일 취득</h5>     
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal 구조 -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<style>
+    .box2 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        background-color: #000000;
+    }
+
+    .field-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 12em;
+        border: 1px solid #c0c0c0;
+        background-color: #ffffff;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 활성화된 상태 */
+.field-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.field-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3; /* 기본 불투명도 설정 */
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.field-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.field-box:hover::before {
+    opacity: 0.5; /* 호버 시 불투명도 증가 */
+}
+
+.field-box:hover .field-content {
+    transform: translateY(-10px); /* 텍스트 상향 이동 효과 */
+    transition: transform 0.3s ease;
+}
+
+.field-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    padding: 10px; /* 여백 추가 */
+    transition: transform 0.3s ease;
+}
+
+#contact .field-content h2, #contact .field-content h5 {
+    color: #ffffff;
+}
+
+#contact .field-content h2 {
+    margin: 0;
+    font-size: 2.5rem; /* 기본 폰트 크기 */
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+#contact .field-content h5 {
+    margin: 0;
+    font-size: 1.2rem; /* 기본 폰트 크기 */
+    line-height: 1.2;
+}
+
+/* 반응형 미디어 쿼리 */
+@media screen and (max-width: 768px) {
+    .field-box {
+        margin: 10px 0; /* 상하 간격 추가 */
+    }
+
+    .field-content {
+        padding: 8px; /* 여백 축소 */
+    }
+
+    #contact .field-content h2 {
+        font-size: 2rem; /* 헤딩 크기 축소 */
+    }
+
+    #contact .field-content h5 {
+        font-size: 1rem; /* 서브헤딩 크기 축소 */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .field-box {
+        margin: 8px 0; /* 상하 간격 축소 */
+    }
+
+    .field-content {
+        padding: 6px; /* 여백 더 축소 */
+    }
+
+    #contact .field-content h2 {
+        font-size: 1.6rem; /* 헤딩 크기 추가 축소 */
+    }
+
+    #contact .field-content h5 {
+        font-size: 0.9rem; /* 서브헤딩 크기 추가 축소 */
+    }
+}
+
+
+    /* Modal 스타일 */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 80%;
+        max-height: 80%;
+        animation: zoomIn 0.3s;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const boxes = document.querySelectorAll(".field-box");
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const closeModalButton = document.querySelector(".close");
+    let scrollPosition = 0; // 현재 스크롤 위치를 저장할 변수
+
+    // 요소가 뷰포트에 들어왔는지 확인하는 함수
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // 스크롤 이벤트 핸들러
+    function handleScroll() {
+        boxes.forEach((box) => {
+            if (isInViewport(box)) {
+                box.classList.add("visible");
+            } else {
+                box.classList.remove("visible");
+            }
+        });
+    }
+
+    // 모달 열기 함수 (기존 함수 대체)
+    function openModal(imageSrc) {
+        scrollPosition = window.pageYOffset || document.documentElement.scrollTop; // 스크롤 위치 저장
+        modalImage.src = imageSrc;
+        modal.style.display = "block";
+        document.body.style.position = "fixed"; // 스크롤 방지
+        document.body.style.top = `-${scrollPosition}px`; // 현재 스크롤 위치 유지
+    }
+
+    // 모달 닫기 함수 (기존 함수 대체)
+    function closeModal() {
+        modal.style.display = "none";
+        document.body.style.position = ""; // 스크롤 복원
+        document.body.style.top = "";
+        window.scrollTo(0, scrollPosition); // 저장된 스크롤 위치로 이동
+    }
+
+    // 초기 상태 확인 및 스크롤 이벤트 등록
+    handleScroll(); // 페이지 로드 시 확인
+    window.addEventListener("scroll", handleScroll);
+
+    // 각 필드 박스 클릭 이벤트 추가
+    boxes.forEach((box) => {
+        box.addEventListener("click", function () {
+            const backgroundImage = box.style.backgroundImage;
+            const imageSrc = backgroundImage.slice(5, -2); // "url('...')" 포맷 제거
+            openModal(imageSrc);
+        });
+    });
+
+    // 모달 닫기 이벤트 추가
+    closeModalButton.addEventListener("click", closeModal);
+    modal.addEventListener("click", closeModal); // 모달 클릭 시 닫기
+});</script>
+
+
+<header id="custom-header3">
+	<div class="header-content">
+		<h2>성장배경,지원동기 및 포부</h2>
+		<H5>지원동기 및 포부입니다.</H5>
+
+<!-- 외부 CSS 연결 -->
+<link rel="stylesheet" href="assets/css/work-gallery.css">
+</head>
+<body>
+<!-- 갤러리 컨테이너 -->
+<div id="gallery-container">
+	<img id="gallery-image" src="images/fulls/상세1.jpg" alt="Gallery Image">
+    
+</div>
+<script src="assets/js/work-gallery.js"></script>
+
+
+
+<script>
+    function openModal(imageSrc) {
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        modal.style.display = 'block';
+        modalImage.src = imageSrc;
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('imageModal');
+        modal.style.display = 'none';
+    }
+</script>
+
+		<!-- Footer -->
+			<footer id="footer">
+
+				<!-- Icons -->
+					<ul class="icons">
+						<li><a href="https://www.instagram.com/vi.neul/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+
+				<!-- Menu -->
+					<ul class="menu">
+					</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/video-scroll.js"></script>
+            <script src="assets/js/gallery.js"></script>
+
+	</body>
+</html>
