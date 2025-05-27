@@ -1,0 +1,67 @@
+
+/* 고유 스타일: 다른 페이지와 충돌 방지 */
+body.custom-page {
+    margin: 0;
+    padding: 0;
+    background: url('/mnt/data/p3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+.custom-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.custom-text-block {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.custom-text-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1 {
+    font-size: 2.5vw;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.5vw;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .custom-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 4vw;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    p {
+        font-size: 4.5vw;
+    }
+}
